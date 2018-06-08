@@ -39,23 +39,3 @@ format_counts <- function(M, package){
   
   return(outdat)
 }
-
-# mu_counts <- read.table("/mnt/norbert/home/jedidiah/projects/doomsayer/demo/1kg_new_subtypes/subtype_count_matrix.txt", header=T, stringsAsFactors=F)
-
-# dsdat <- format_counts(mu_counts, "deconstructSigs")
-# sum(colnames(dsdat) == colnames(sigs.input)) == 96
-# 
-# ssdat <- format_counts(mu_counts, "SomaticSignatures")
-# sum(rownames(ssdat) == rownames(sca_mm)) == 96
-# 
-# signerdat <- format_counts(mu_counts, "signeR")
-# sum(colnames(signerdat) == colnames(mut)) == 96
-# # somaticsigs
-# sca_mm
-# 
-# # deconstructsigs
-# sigs.input
-# 
-# # signer
-# mut <- read.table(system.file("extdata","21_breast_cancers.mutations.txt",
-#                               package="signeR"), header=TRUE, check.names=FALSE)

@@ -1,8 +1,8 @@
 Package: musigtools
-Title: Helper functions for the SMAUG pipeline
+Title: musigtools
 Version: 0.1.0
 Authors@R: person("Jedidiah", "Carlson", , "jed.e.carlson@gmail.com", role = c("aut", "cre"))
-Description: Suite of functions used for singleton mutation analysis
+Description: Functions for cross-compatibility between mutation signature analysis tools
 Depends: R (>= 3.1.2)
 License: Free
 LazyData: true

@@ -2,8 +2,8 @@ Package: musigtools
 Title: musigtools
 Version: 0.1.0
 Authors@R: person("Jedidiah", "Carlson", , "jed.e.carlson@gmail.com", role = c("aut", "cre"))
-Description: Functions for cross-compatibility between mutation signature analysis tools
+Description: This package contains functions enabling cross-compatibility between Helmsman and other mutation signature analysis tools.
 Depends: R (>= 3.1.2)
-License: Free
+License: MIT + file LICENSE
 LazyData: true
 RoxygenNote: 6.0.1

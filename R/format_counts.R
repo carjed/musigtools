@@ -27,7 +27,7 @@ format_counts <- function(M, package){
     rownames(outdat) <- M[,1]
     
   } else if(package == "SomaticSignatures"){
-    outdat <- as.data.frame(t(mu_counts[,-1]))
+    outdat <- as.data.frame(t(M[,-1]))
     colnames(outdat) <- M$ID
     rownames(outdat) <- hcols_to_ss_rows(subtypes_in)
     

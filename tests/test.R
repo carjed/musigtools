@@ -1,4 +1,6 @@
-data(subtype_count_matrix)
+library("musigtools")
+
+data("subtype_count_matrix")
 
 dsdat <- format_counts(subtype_count_matrix, "deconstructSigs")
 # sum(colnames(dsdat) == colnames(sigs.input)) == 96

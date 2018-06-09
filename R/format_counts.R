@@ -35,6 +35,11 @@ format_counts <- function(M, package){
     outdat <- M[,-1]
     colnames(outdat) <- hcols_to_signer_cols(subtypes_in)
     rownames(outdat) <- M[,1]
+    
+  } else if (package == "YAPSA"){
+    outdat <- as.data.frame(t(M[,-1]))
+    colnames(outdat) <- M$ID
+    rownames(outdat) <- hcols_to_yapsa_rows(subtypes_in)
   }
   
   return(outdat)

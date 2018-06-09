@@ -19,6 +19,6 @@ Convert Helmsan subtype format to SomaticSignatures subtype format
 \dontrun{
 mu_counts <- read.table("/path/to/subtype_count_matrix.txt", header=T, stringsAsFactors=F)
 subtypes_in <- colnames(mu_counts)[-1]
-signeR_rows <- hcols_to_ss_rows(subtypes_in)
+SomaticSigs_rows <- hcols_to_ss_rows(subtypes_in)
 }
 }

@@ -5,9 +5,6 @@
 \alias{subtype_count_matrix}
 \title{Mutation spectra matrix for 2504 samples from the 1000 Genomes Project}
 \format{A data frame with 2504 rows and 97 variables}
-\source{
-\url{http://www.diamondse.info/}
-}
 \usage{
 subtype_count_matrix
 }

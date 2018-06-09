@@ -31,5 +31,7 @@ mu_counts <- read.table("/path/to/subtype_count_matrix.txt", header=T, stringsAs
 msm_deconstructSigs <- format_counts(mu_counts, "deconstructSigs")
 msm_SomaticSignatures <- format_counts(mu_counts, "SomaticSignatures")
 msm_signeR <- format_counts(mu_counts, "signeR")
+msm_maftools <- format_counts(mu_counts, "maftools")
+msm_MutationalPatterns <- format_counts(mu_counts, "MutationalPatterns")
 }
 }

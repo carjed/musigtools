@@ -16,30 +16,37 @@
 #' msm_deconstructSigs <- format_counts(mu_counts, "deconstructSigs")
 #' msm_SomaticSignatures <- format_counts(mu_counts, "SomaticSignatures")
 #' msm_signeR <- format_counts(mu_counts, "signeR")
+#' msm_maftools <- format_counts(mu_counts, "maftools")
+#' msm_MutationalPatterns <- format_counts(mu_counts, "MutationalPatterns")
 #'}
 #' @export
 format_counts <- function(M, package){
   subtypes_in <- colnames(M)[-1]
   
-  if(package == "deconstructSigs"){
+  if(package %in% c("deconstructSigs", "maftools")){
     outdat <- M[,-1]
-    colnames(outdat) <- hcols_to_ds_cols(subtypes_in)
+    colnames(outdat) <- hcols_to_bracket_fmt(subtypes_in)
     rownames(outdat) <- M[,1]
     
   } else if(package == "SomaticSignatures"){
     outdat <- as.data.frame(t(M[,-1]))
     colnames(outdat) <- M$ID
-    rownames(outdat) <- hcols_to_ss_rows(subtypes_in)
+    rownames(outdat) <- hcols_to_ss_fmt(subtypes_in)
+    
+  } else if(package == "MutationalPatterns"){
+    outdat <- as.data.frame(t(M[,-1]))
+    colnames(outdat) <- M$ID
+    rownames(outdat) <- hcols_to_bracket_fmt(subtypes_in)
     
   } else if (package == "signeR"){
     outdat <- M[,-1]
-    colnames(outdat) <- hcols_to_signer_cols(subtypes_in)
+    colnames(outdat) <- hcols_to_signer_fmt(subtypes_in)
     rownames(outdat) <- M[,1]
     
   } else if (package == "YAPSA"){
     outdat <- as.data.frame(t(M[,-1]))
     colnames(outdat) <- M$ID
-    rownames(outdat) <- hcols_to_yapsa_rows(subtypes_in)
+    rownames(outdat) <- hcols_to_yapsa_fmt(subtypes_in)
   }
   
   return(outdat)

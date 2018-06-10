@@ -4,7 +4,18 @@
 
 An R package with functions for formatting mutation spectra matrices output by [Helmsman](https://github.com/carjed/helmsman) to be used in various other mutation signature analysis packages.
 
-Currently supported packages:
+# Installation
+
+The latest version of `musigtools` can be installed from this Github repository using `devtools`:
+
+```r
+library(devtools)
+devtools::install_github("carjed/musigtools")
+```
+
+# Currently supported packages
+
+`musigtools` can convert the 
 
 - [deconstructSigs](https://cran.r-project.org/web/packages/deconstructSigs/index.html)
 - [maftools](https://bioconductor.org/packages/release/bioc/html/maftools.html)
